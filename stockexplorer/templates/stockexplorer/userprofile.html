@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="form-inline" action="/" method="get">
+      <div class="form-group">
+        <input type="text" name="user_job" placeholder="What is your job?" />
+        <input type="text" name="user_study" placeholder="What is your field of study?" />
+        <input type="text" name="user_interest" placeholder="What are your hobbies?" />
+        <button class="btn btn-primary mb-2">Submit</button>
+      </div>
+    </form>
+  	<div>
+  		<h3>Sectors you might be interested in: {{ sector_x }}, {{sector_y}}, {{sector_z}}</h3>
+  	</div>
+    <div>
+      <h3>Stocks that you might be interested in:</h3>
+      {% for key, value in stock_exp.items %}
+        {{ key }} : {{ value }}
+      {% endfor %}
+    </div>
+  </body>
+
+</html>
